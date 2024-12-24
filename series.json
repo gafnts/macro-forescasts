@@ -1,4 +1,6 @@
 {
-    "DFF": "Federal Funds Effective Rate",
-    "UNRATE": "Unemployment Rate"
+    "USRECD": "nberg_recession",
+    "DFF": "federal_funds_rate",
+    "UNRATE": "unemployment_rate",
+    "EMRATIO": "employment_population_ratio"
 }
