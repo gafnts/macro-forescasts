@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .category {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        .monthly {
+            border-left: 4px solid #2ecc71;
+        }
+        .quarterly {
+            border-left: 4px solid #3498db;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9em;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .color-box {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FRED Series Configuration</h1>
+        <div class="legend">
+            <div class="legend-item">
+                <span class="color-box" style="background: #2ecc71;"></span>
+                Monthly
+            </div>
+            <div class="legend-item">
+                <span class="color-box" style="background: #3498db;"></span>
+                Quarterly
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>Real Economy Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="quarterly">
+                    <td>GDP</td>
+                    <td>Real Gross Domestic Product</td>
+                    <td>Quarterly</td>
+                    <td>Billions of Chained 2012 Dollars</td>
+                    <td>30</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>A261RX1Q020SBEA</td>
+                    <td>Gross Domestic Income</td>
+                    <td>Quarterly</td>
+                    <td>Billions of Dollars</td>
+                    <td>60</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>UNRATE</td>
+                    <td>Unemployment Rate</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>5</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>EMRATIO</td>
+                    <td>Employment-Population Ratio</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>5</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>PAYEMS</td>
+                    <td>All Employees, Total Nonfarm</td>
+                    <td>Monthly</td>
+                    <td>Thousands of Persons</td>
+                    <td>5</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>USGOOD</td>
+                    <td>All Employees, Goods-Producing</td>
+                    <td>Monthly</td>
+                    <td>Thousands of Persons</td>
+                    <td>5</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>SRVPRD</td>
+                    <td>All Employees, Service-Providing</td>
+                    <td>Monthly</td>
+                    <td>Thousands of Persons</td>
+                    <td>5</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>GPDIC1</td>
+                    <td>Real Gross Private Domestic Investment</td>
+                    <td>Quarterly</td>
+                    <td>Billions of Chained 2012 Dollars</td>
+                    <td>30</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>W206RC1Q156SBEA</td>
+                    <td>Gross Saving as a Percentage of GNI</td>
+                    <td>Quarterly</td>
+                    <td>Percent</td>
+                    <td>30</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>CP</td>
+                    <td>Corporate Profits After Tax</td>
+                    <td>Quarterly</td>
+                    <td>Billions of Dollars</td>
+                    <td>60</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Monetary and Price Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="monthly">
+                    <td>DFF</td>
+                    <td>Federal Funds Effective Rate</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>PCEPI</td>
+                    <td>Personal Consumption Expenditures Price Index</td>
+                    <td>Monthly</td>
+                    <td>Index 2012=100</td>
+                    <td>30</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>CORESTICKM159SFRBATL</td>
+                    <td>Sticky Price CPI less Food and Energy</td>
+                    <td>Monthly</td>
+                    <td>Percent Change</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>MBCURRCIR</td>
+                    <td>Monetary Base: Currency in Circulation</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>15</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>M1SL</td>
+                    <td>M1 Money Stock</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>M1V</td>
+                    <td>Velocity of M1 Money Stock</td>
+                    <td>Monthly</td>
+                    <td>Ratio</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>M2SL</td>
+                    <td>M2 Money Stock</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>M2V</td>
+                    <td>Velocity of M2 Money Stock</td>
+                    <td>Monthly</td>
+                    <td>Ratio</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Financial Market Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="monthly">
+                    <td>T10Y3M</td>
+                    <td>10Y Treasury - 3M Treasury Spread</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>T10Y2Y</td>
+                    <td>10Y Treasury - 2Y Treasury Spread</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>NASDAQCOM</td>
+                    <td>NASDAQ Composite Index</td>
+                    <td>Monthly</td>
+                    <td>Index</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>NASDAQ100</td>
+                    <td>NASDAQ 100 Index</td>
+                    <td>Monthly</td>
+                    <td>Index</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>NFCI</td>
+                    <td>Chicago Fed National Financial Conditions Index</td>
+                    <td>Monthly</td>
+                    <td>Index</td>
+                    <td>7</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>STLFSI</td>
+                    <td>St. Louis Fed Financial Stress Index</td>
+                    <td>Monthly</td>
+                    <td>Index</td>
+                    <td>7</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>BAMLH0A0HYM2</td>
+                    <td>ICE BofA US High Yield Option-Adjusted Spread</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Credit Market Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="monthly">
+                    <td>TOTALSL</td>
+                    <td>Total Consumer Credit Outstanding</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>35</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>BUSLOANS</td>
+                    <td>Commercial and Industrial Loans</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>DRBLACBS</td>
+                    <td>Delinquency Rate on Commercial and Industrial Loans</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>45</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>TOTBKCR</td>
+                    <td>Bank Credit of All Commercial Banks</td>
+                    <td>Monthly</td>
+                    <td>Billions of Dollars</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>BCNSDODNS</td>
+                    <td>Nonfinancial Corporate Business Debt Securities and Loans</td>
+                    <td>Quarterly</td>
+                    <td>Billions of Dollars</td>
+                    <td>60</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Housing Market Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="monthly">
+                    <td>HOUST</td>
+                    <td>Housing Starts</td>
+                    <td>Monthly</td>
+                    <td>Thousands of Units</td>
+                    <td>15</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>MORTGAGE30US</td>
+                    <td>30-Year Fixed Rate Mortgage Average</td>
+                    <td>Monthly</td>
+                    <td>Percent</td>
+                    <td>1</td>
+                    <td>Not Adjusted</td>
+                </tr>
+                <tr class="quarterly">
+                    <td>CSUSHPISA</td>
+                    <td>Case-Shiller U.S. National Home Price Index</td>
+                    <td>Quarterly</td>
+                    <td>Index</td>
+                    <td>60</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Fiscal Policy Indicators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Series ID</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                    <th>Units</th>
+                    <th>Publication Lag (Days)</th>
+                    <th>Seasonal Adjustment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="quarterly">
+                    <td>GFDEGDQ188S</td>
+                    <td>Federal Debt as Percent of GDP</td>
+                    <td>Quarterly</td>
+                    <td>Percent</td>
+                    <td>60</td>
+                    <td>Seasonally Adjusted</td>
+                </tr>
+                <tr class="monthly">
+                    <td>GFDEBTN</td>
+                    <td>Federal Debt: Total Public Debt</td>
+                    <td>Monthly</td>
+                    <td>Millions of Dollars</td>
+                    <td>5</td>
+                    <td>Not Adjusted</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
