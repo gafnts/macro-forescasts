@@ -1,0 +1,7 @@
+{
+    "USRECD": "nberg_recession_indicator",
+    "DFF": "federal_funds_rate",
+    "UNRATE": "unemployment_rate",
+    "EMRATIO": "employment_population_ratio",
+    "T10Y2Y": "yield_curve"
+}
