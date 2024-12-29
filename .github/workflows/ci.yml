@@ -1,0 +1,47 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Step 1: Checkout the code.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up uv.
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      # Step 3: Set up Python.
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
+      # Step 4: Install dependencies.
+      - name: Install dependencies
+        run: uv sync --dev
+
+      # Step 5: Run Ruff for linting.
+      - name: Lint with Ruff
+        run: uv run ruff check --output-format=github
+
+      # Step 6: Run Ruff for formating.
+      - name: Format with Ruff
+        run: uv run ruff format
+
+      # Step 7: Run Pytest for unit testing.
+      - name: Unit testing with Pytest
+        run: uv run pytest tests
