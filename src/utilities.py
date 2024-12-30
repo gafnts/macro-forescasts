@@ -41,7 +41,7 @@ def extract_base_dataset(
     fred_client: Fred, series_ids: dict, base_df: pd.DataFrame
 ) -> pd.DataFrame:
     for id, name in series_ids.items():
-        ts = fred_client.get_series(id, frequency='m', aggregation_method='avg')
+        ts = fred_client.get_series(id, frequency="m", aggregation_method="avg")
 
         ts_df = (
             pd.DataFrame(ts, columns=[name])
