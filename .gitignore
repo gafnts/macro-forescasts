@@ -171,4 +171,4 @@ cython_debug/
 .pypirc
 
 # DVC data files
-data/raw/extracted_data.csv
+data/raw/
