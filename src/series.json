@@ -11,6 +11,14 @@
         "name": "real_gross_domestic_income",
         "category": "real_economy"
     },
+    "GPDIC1": {
+        "name": "real_gross_private_domestic_investment",
+        "category": "real_economy"
+    },
+    "W207RC1Q156SBEA": {
+        "name": "net_saving_as_percentage_of_gni",
+        "category": "real_economy"
+    },
     "UNRATE": {
         "name": "unemployment_rate",
         "category": "labor_market"
@@ -31,21 +39,13 @@
         "name": "all_employees_service_providing",
         "category": "labor_market"
     },
-    "GPDIC1": {
-        "name": "real_gross_private_domestic_investment",
-        "category": "investment"
-    },
-    "W207RC1Q156SBEA": {
-        "name": "net_saving_as_percentage_of_gni",
-        "category": "savings"
-    },
     "CP": {
         "name": "corporate_profits_after_tax",
         "category": "corporate"
     },
     "DFF": {
         "name": "federal_funds_effective_rate",
-        "category": "interest_rates"
+        "category": "monetary"
     },
     "PCEPI": {
         "name": "personal_consumption_expenditures_price_index",
@@ -95,7 +95,7 @@
         "name": "chicago_fed_national_financial_conditions_index",
         "category": "financial_market"
     },
-    "STLFSI": {
+    "STLFSI4": {
         "name": "st_louis_fed_financial_stress_index",
         "category": "financial_market"
     },
@@ -112,7 +112,19 @@
         "category": "credit_market"
     },
     "DRBLACBS": {
-        "name": "delinquency_rate_on_commercial_and_industrial_loans",
+        "name": "delinquency_rate_on_business_loans",
+        "category": "credit_market"
+    },
+    "DRCCLACBS": {
+        "name": "delinquency_rate_on_credit_card_loans",
+        "category": "credit_market"
+    },
+    "DRCLACBS": {
+        "name": "delinquency_rate_on_consumer_loans",
+        "category": "credit_market"
+    },
+    "DRALACBS": {
+        "name": "delinquency_rate_on_all_loans",
         "category": "credit_market"
     },
     "TOTBKCR": {
@@ -131,12 +143,20 @@
         "name": "30_year_fixed_rate_mortgage_average",
         "category": "housing_market"
     },
+    "MSPUS": {
+        "name": "median_sales_price_of_houses_sold",
+        "category": "housing_market"
+    },
     "CSUSHPISA": {
         "name": "case_shiller_us_national_home_price_index",
         "category": "housing_market"
     },
     "GFDEGDQ188S": {
         "name": "federal_debt_as_percent_of_gdp",
+        "category": "fiscal_policy"
+    },
+    "FYFSGDA188S": {
+        "name": "federal_surplus_deficit_as_percent_of_gdp",
         "category": "fiscal_policy"
     },
     "GFDEBTN": {
