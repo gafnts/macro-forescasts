@@ -162,5 +162,17 @@
     "GFDEBTN": {
         "name": "federal_debt_total_public_debt",
         "category": "fiscal_policy"
+    },
+    "UMCSENT": {
+        "name": "consumer_sentiment",
+        "category": "sentiment"
+    },
+    "CSCICP03USM665S": {
+        "name": "composite_consumer_confidence_amplitud",
+        "category": "sentiment"
+    },
+    "BSCICP03USM665S": {
+        "name": "composite_business_confidence_amplitud",
+        "category": "sentiment"
     }
 }
