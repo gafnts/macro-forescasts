@@ -41,7 +41,7 @@ class FredMetadataCollector:
 
 if __name__ == "__main__":
     collector = FredMetadataCollector(
-        os.path.join(os.getcwd(), "src/static/series.json")
+        os.path.join(os.getcwd(), "src/static/fred/series.json")
     )
     fred_metadata = collector.collect_metadata()
-    fred_metadata.to_csv(os.path.join(os.getcwd(), "src/data/fred_metadata.csv"))
+    fred_metadata.to_csv(os.path.join(os.getcwd(), "src/data/metadata/fred.csv"))
