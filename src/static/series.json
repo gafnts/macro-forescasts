@@ -39,6 +39,10 @@
         "name": "all_employees_service_providing",
         "category": "labor_market"
     },
+    "PRS85006091": {
+        "name": "all_employees_labor_productiviy",
+        "category": "labor_market"
+    },
     "CP": {
         "name": "corporate_profits_after_tax",
         "category": "corporate"
