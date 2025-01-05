@@ -41,6 +41,10 @@ jobs:
       - name: Format with Ruff
         run: uv run ruff format
 
+      # Step 7: Mypy static type-checking.
+      - name: Static type-cheching with Mypy
+        run: uv run mypy .
+
       # Step 7: Run Pytest for unit testing.
       - name: Unit testing with Pytest
         run: uv run pytest tests
