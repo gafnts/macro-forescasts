@@ -1,0 +1,12 @@
+{
+    "frequencies": [
+        "Daily, 7-Day",
+        "Weekly, Ending Friday",
+        "Weekly, Ending Thursday",
+        "Weekly, Ending Wednesday",
+        "Monthly",
+        "Quarterly",
+        "Quarterly, End of Period",
+        "Annual"
+    ]
+}
