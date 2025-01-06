@@ -1,0 +1,21 @@
+{
+    "+1 or 0": "binary",
+    "Ratio": "ratio",
+    "Thousands of Persons": "thousands",
+    "Thousands of Units": "thousands",
+    "Index": "index",
+    "Index 2017=100": "index",
+    "Index 1966:Q1=100": "index",
+    "Index Jan 2000=100": "index",
+    "Index Feb 5, 1971=100": "index",
+    "Normalised (Normal=100)": "index",
+    "Percent": "percent",
+    "Percent of GDP": "percent",
+    "Percent Change from Quarter One Year Ago": "rate_of_change",
+    "Percent Change from Year Ago": "rate_of_change",
+    "Dollars": "dollars",
+    "Millions of Dollars": "millions_dollars",
+    "Billions of Dollars": "billions_dollars",
+    "Billions of U.S. Dollars": "billions_dollars",
+    "Billions of Chained 2017 Dollars": "billions_dollars"
+}
