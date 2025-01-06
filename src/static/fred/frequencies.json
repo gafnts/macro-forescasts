@@ -1,0 +1,12 @@
+{
+    "Daily": "daily",
+    "Daily, 7-Day": "daily",
+    "Daily, Close": "daily",
+    "Weekly, Ending Friday": "weekly",
+    "Weekly, Ending Thursday": "weekly",
+    "Weekly, Ending Wednesday": "weekly",
+    "Monthly": "monthly",
+    "Quarterly": "quarterly",
+    "Quarterly, End of Period": "quarterly",
+    "Annual": "annual"
+}
