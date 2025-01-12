@@ -51,8 +51,8 @@ class FredMetadataCollector:
         return pd.concat(results, ignore_index=True)
 
     def process_metadata(self, metadata: pd.DataFrame) -> pd.DataFrame:
-        metadata["Frequency"] = metadata["frequency"].map(self.frequencies)
-        metadata["Unit"] = metadata["units"].map(self.units)
+        metadata["frequency"] = metadata["frequency"].map(self.frequencies)
+        metadata["units"] = metadata["units"].map(self.units)
         return metadata
 
 
